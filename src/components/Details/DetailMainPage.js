@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "./ProjectCards";
+import ProjectCard from "./ShowcaseCard";
 import Particle from "../Particle";
 import ManuelAIvid from "../../Assets/better-manuel.mp4"
 import AIvid from "../../Assets/IA.mp4"
