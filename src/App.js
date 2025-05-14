@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Preloader from "../src/components/Pre";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home/Home";
-import Projects from "./components/Project/About";
+import Home from "./components/Home/Home_Base";
+import Projects from "./components/Project/Project_MainPage";
 import About from "./components/Details/DetailMainPage";
 import Footer from "./components/Footer";
-import Tests from "./components/Project/Tests"
+import Tests from "./components/Project/Project_Tests"
+import TestVisualization from "./components/Project/TestVisualization"
 import {
   BrowserRouter as Router,
   Route,
@@ -40,6 +41,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="*" element={<Navigate to="/"/>} />
           <Route path="/tests" element={<Tests/>} />
+          <Route path="/visualization/:testId" element={<TestVisualization />} />
         </Routes>
         <Footer />
       </div>

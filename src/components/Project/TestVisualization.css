@@ -1,0 +1,99 @@
+.visualization-section {
+  min-height: 100vh;
+  background-color: #121212;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.maze-canvas {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 15px 0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin-right: 10px;
+  border: 1px solid #555;
+}
+
+.legend-line {
+  width: 30px;
+  height: 3px;
+  background-color: #3498db;
+  margin-right: 10px;
+}
+
+.direction-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.table-responsive {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.table-dark {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.table-dark thead th {
+  background-color: #2c2c2c;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.table-dark.table-hover tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.table-primary {
+  background-color: rgba(52, 152, 219, 0.3) !important;
+}
+
+/* Contrôles d'animation */
+.animation-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Icônes Unicode */
+.icon {
+  font-size: 16px;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.icon-back {
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .maze-canvas {
+    max-width: 100%;
+    height: auto;
+  }
+}
