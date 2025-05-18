@@ -25,7 +25,7 @@ function Footer() {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <AiFillGithub />
+                Github <AiFillGithub />
               </a>
             </li>
            

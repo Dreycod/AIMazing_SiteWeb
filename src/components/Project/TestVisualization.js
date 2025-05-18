@@ -4,8 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import { Container, Row, Col, Spinner, Alert, Button, Card } from "react-bootstrap"
 import { useParams, useNavigate } from "react-router-dom"
 import Particle from "../Particle"
-import "./TestVisualization.css"
-
+import "../../styles/TestVisualization.css"
 // Constantes pour la visualisation
 const CELL_SIZE = 40
 const GRID_SIZE = 10 // Changé de 11 à 10 pour correspondre à la nouvelle matrice

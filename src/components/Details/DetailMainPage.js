@@ -7,13 +7,14 @@ import AIvid from "../../Assets/IA.mp4"
 import DojoVid from "../../Assets/Dojo.mp4"
 import Automate_pic from "../../Assets/Automate.png"
 import API_pic from "../../Assets/R.png"
+
 function Projects() {
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
         <h1 className="project-heading">
-          Fonctionnalités <strong className="purple"> Projet </strong>
+          Les differentes <strong className="purple"> fonctionnalités  </strong> du projet
         </h1>
         <p style={{ color: "white" }}>
           Cliquez pour accèder aux differents Gits du projet

@@ -11,10 +11,10 @@ function ProjectTests() {
   const [filteredTests, setFilteredTests] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  
   const [searchTerm, setSearchTerm] = useState("")
   const [filterModel, setFilterModel] = useState("")
   const navigate = useNavigate()
-
   // Récupérer tous les tests
   useEffect(() => {
     const fetchTests = async () => {
@@ -79,6 +79,8 @@ function ProjectTests() {
     }
   }, [searchTerm, filterModel, tests])
 
+
+
   // Gérer la navigation vers la page de visualisation
   const handleViewVisualization = useCallback(
     (testId) => {
@@ -86,6 +88,7 @@ function ProjectTests() {
     },
     [navigate],
   )
+
 
   // Extraire les modèles uniques pour le filtre
   const uniqueModels = [...new Set(tests.map((test) => test.model_id))].sort((a, b) => a - b)
@@ -168,24 +171,17 @@ function ProjectTests() {
                       </Col>
                     </Row>
                   </Card.Body>
-                  <Card.Footer className="bg-dark border-secondary d-flex justify-content-between">
-                    <Button
-                      variant="outline-info"
-                      size="sm"
-                      onClick={() => handleViewVisualization(test.id)}
-                      style={{ zIndex: 100, position: "relative" }}
-                    >
-                      Voir la visualisation
-                    </Button>
-                    <Button
-                      variant="outline-light"
-                      size="sm"
-                      onClick={() => {}}
-                      style={{ zIndex: 100, position: "relative" }}
-                    >
-                      Détails
-                    </Button>
-                  </Card.Footer>
+                 <Card.Footer className="bg-dark border-secondary d-flex justify-content-center">
+  <Button
+    variant="outline-info"
+    size="sm"
+    onClick={() => handleViewVisualization(test.id)}
+    style={{ zIndex: 100, position: "relative" }}
+  >
+    Voir la visualisation
+  </Button>
+</Card.Footer>
+
                 </Card>
               </Col>
             ))}

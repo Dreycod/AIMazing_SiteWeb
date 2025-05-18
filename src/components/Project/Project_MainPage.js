@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { Container, Row, Col, Card, Spinner, Alert } from "react-bootstrap"
 import { useNavigate } from "react-router-dom"
 import Particle from "../Particle"
+import VideoStream from "./VideoStream"
 import "../../styles/project.css"
 
 function ProjectMainPage() {
@@ -101,25 +102,10 @@ function ProjectMainPage() {
         )}
 
         <Row className="mb-5 mx-0">
-          <Col lg={8} className="mb-4 mb-lg-0 px-md-2">
-            <Card className="h-100 border-0 shadow-sm overflow-hidden bg-dark text-light">
-              <Card.Header className="bg-dark border-secondary d-flex justify-content-between align-items-center">
-                <h5 className="mb-0">Flux en direct</h5>
-                <button className="btn btn-sm btn-outline-light">Lecture</button>
-              </Card.Header>
-              <div className="video-container bg-black" style={{ height: "360px", position: "relative" }}>
-                <div className="d-flex flex-column justify-content-center align-items-center h-100 text-light">
-                  <p className="text-danger mb-3">
-                    Impossible de charger le flux vidéo. Veuillez vérifier la connexion.
-                  </p>
-                  <button className="btn btn-sm btn-danger">Réessayer</button>
-                </div>
-              </div>
-              <Card.Footer className="bg-dark border-secondary">
-                <small className="text-light">Flux en direct de la caméra du robot</small>
-              </Card.Footer>
-            </Card>
+           <Col lg={8} className="mb-4 mb-lg-0 px-md-2">
+            <VideoStream streamUrl="http://webcam.scs.ryerson.ca/mjpg/video.mjpg" />
           </Col>
+          
           <Col lg={4} className="px-md-2">
             <Row className="mx-0">
               <Col xs={12} className="mb-4 px-0">
@@ -239,9 +225,6 @@ function ProjectMainPage() {
                         </Col>
                       </Row>
                     </Card.Body>
-                    <Card.Footer className="bg-dark border-secondary text-center">
-                      <button className="btn btn-sm btn-purple">Voir les détails</button>
-                    </Card.Footer>
                   </Card>
                 </Col>
               ))}
@@ -250,10 +233,10 @@ function ProjectMainPage() {
             <div className="text-center mt-3 mb-4">
               <button
                 onClick={handleViewAllTests}
-                className="btn btn-purple btn-lg"
+                className="btn-purple btn-lg"
                 style={{ zIndex: 100, position: "relative" }}
               >
-                Voir tous les tests
+                Voir les détails des tests
               </button>
             </div>
           </>

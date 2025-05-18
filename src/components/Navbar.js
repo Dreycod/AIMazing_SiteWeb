@@ -59,16 +59,6 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/about"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> Details
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
                 to="/project"
                 onClick={() => updateExpanded(false)}
               >
@@ -78,13 +68,20 @@ function NavBar() {
                 Projet
               </Nav.Link>
             </Nav.Item>
-
-
            
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/about"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> Details
+              </Nav.Link>
+            </Nav.Item>
 
             <Nav.Item className="fork-btn">
               <Button
-                href="https://github.com/Dreycod/AImazing_DOJO"
+                href="https://github.com/Dreycod/AIMazing_SiteWeb"
                 target="_blank"
                 className="fork-btn-inner"
               >

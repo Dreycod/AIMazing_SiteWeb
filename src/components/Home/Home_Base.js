@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap"
 import { useNavigate } from "react-router-dom"
 import Particle from "../Particle"
 import "./Home.css"
+import Automate_pic from "../../Assets/Automate.png"
 
 function Home_Base() {
   const navigate = useNavigate()
@@ -30,7 +31,7 @@ function Home_Base() {
               <p className="hero-subtitle">
                 Un projet d'intelligence artificielle sur un automate capable de naviguer dans un labyrinthe
               </p>
-              <div className="hero-buttons">
+              <div className="hero-buttons" >
                 <Button variant="primary" className="hero-button" onClick={navigateToProject}>
                   Voir la démo
                 </Button>
@@ -41,7 +42,7 @@ function Home_Base() {
             </Col>
             <Col md={5} className="hero-image-container">
               <div className="hero-image">
-                <img src="/src/Assets/placeholder.svg?height=400&width=400" alt="Robot AI-Mazing" />
+                <img src={Automate_pic} alt="Robot AI-Mazing" />
               </div>
             </Col>
           </Row>
@@ -51,7 +52,9 @@ function Home_Base() {
       {/* Section Fonctionnalités */}
       <Container fluid className="features-section">
         <Container>
+          <Row className="align-items-center">
           <h2 className="section-title">Fonctionnalités principales</h2>
+            </Row>
           <Row className="features-grid">
             <Col md={3} sm={6} className="feature-item">
               <div className="feature-card">

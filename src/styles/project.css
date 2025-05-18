@@ -40,6 +40,17 @@
   z-index: 10;
 }
 
+.btn-purple {
+  background-color: #6f42c1; /* Bootstrap's standard purple */
+  color: white;
+  border: none;
+}
+
+.btn-purple:hover {
+  background-color: #5a32a3;
+}
+
+
 /* Tableau des mouvements */
 .movements-section {
   max-height: 400px;
