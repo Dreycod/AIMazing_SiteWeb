@@ -11,6 +11,7 @@ function ProjectMainPage() {
   const [tests, setTests] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [isConnected, setIsConnected] = useState(true)
   const [stats, setStats] = useState({
     totalTests: 0,
     totalDistance: 0,
@@ -102,9 +103,10 @@ function ProjectMainPage() {
         )}
 
         <Row className="mb-5 mx-0">
-           <Col lg={8} className="mb-4 mb-lg-0 px-md-2">
-            <VideoStream streamUrl="http://webcam.scs.ryerson.ca/mjpg/video.mjpg" />
+            <Col lg={8} className="mb-4 mb-lg-0">
+            <VideoStream cameraIP="192.168.0.102" autoPlay={true} showControls={true} />
           </Col>
+          
           
           <Col lg={4} className="px-md-2">
             <Row className="mx-0">
